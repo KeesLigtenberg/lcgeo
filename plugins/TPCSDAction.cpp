@@ -100,10 +100,10 @@ namespace DD4hep {
 
       int getCopyNumber(G4Step* s, bool usePostPos ){
 
-	int cellID = this->cellID( s , usePostPos) ;
+	int cellID0 = this->cellID( s , usePostPos) ;
 	//<id>system:5,side:2,layer:9,module:8,sensor:8</id>
 	//fixme: properly access "layer" part of cellID ....
-	return (  (cellID >>  7 ) &  0x01ff ) ;
+	return (  (cellID0 >>  7 ) &  0x01ff ) ;
       }
 
       /// Returns the cellID(volumeID+local coordinate encoding) of the sensitive volume corresponding to the step
